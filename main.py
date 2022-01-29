@@ -17,7 +17,7 @@ def hello_world(x):
 
         result = int(x) + 1
         time.sleep(5)
-        r.set(x, str(result))
+        r.set(x, result)
         return str(result)
 
     else:
