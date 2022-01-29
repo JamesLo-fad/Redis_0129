@@ -13,12 +13,12 @@ app = Flask(__name__)
 @app.route("/<x>")
 def hello_world(x):
 
-    if not r.exist(x):
+    if not r.exists(x):
 
         result = x + 1
         time.sleep(5)
-        return result
         r.set(result)
-
+        return result
+    
     else:
         r.get(x)
