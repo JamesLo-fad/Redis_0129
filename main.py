@@ -13,9 +13,9 @@ app = Flask(__name__)
 @app.route("/<x>")
 def hello_world(x):
 
-    if not r.exists(int(x)):
+    if not r.exists(x):
 
-        result = x + 1
+        result = int(x) + 1
         time.sleep(5)
         r.set(x, result)
         return result
