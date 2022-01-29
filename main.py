@@ -4,7 +4,7 @@ from flask import Flask
 import redis
 
 r = redis.Redis(
-    host='10.182.0.2',
+    host='127.0.0.1',
     port=6379)
 
 app = Flask(__name__)
@@ -17,8 +17,8 @@ def hello_world(x):
 
         result = x + 1
         time.sleep(5)
-        r.set(result)
+        r.set(x, result)
         return result
-    
+
     else:
         r.get(x)
