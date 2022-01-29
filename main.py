@@ -21,4 +21,5 @@ def hello_world(x):
         return result
 
     else:
-        r.get(x)
+        return r.get(x)
+
