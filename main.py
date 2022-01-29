@@ -17,9 +17,9 @@ def hello_world(x):
 
         result = int(x) + 1
         time.sleep(5)
-        r.set(x, result)
-        return result
+        r.set(x, str(result))
+        return str(result)
 
     else:
-        return r.get(x)
+        return str(r.get(x))
 
